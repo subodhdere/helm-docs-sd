@@ -1,22 +1,16 @@
-name: helm-docs
-
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  workflow_dispatch:
+    branches: [ main ]
+
+name: kasm
 
 jobs:
-  build:
-    runs-on: macOS-latest
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Install helm-docs
-        run: |
-          curl -sSL https://raw.githubusercontent.com/norwoodj/helm-docs/v1.5.0/scripts/install.sh | bash
-      - name: Generate docs
-        run: helm-docs
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v8
-        with:
-          add: 'docs/**'
-          message: 'Update Helm docs'
+    - name: Checkout
+      uses: actions/checkout@v2
