@@ -2,7 +2,7 @@ statefulset:
   image:
     # -- Image to use for deploying, must support an entrypoint which creates users/databases from appropriate config files
     repository: jnorwood/postgresq
-    tag: "26"
+    tag: "27"
 
   # -- Additional volumes to be mounted into the database container
   extraVolumes:
