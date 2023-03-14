@@ -26,7 +26,7 @@ One of the best values parsing example charts here, exhibits several more compli
 | config.usersToCreate[1] | object | `{"name":"hashbash","readwriteDatabases":["hashbash"]}` | user with access to the database with the same name |
 | statefulset.extraVolumes | list | `[{"emptyDir":{},"name":"data"}]` | Additional volumes to be mounted into the database container |
 | statefulset.image.repository | string | `"jnorwood/postgresq"` | Image to use for deploying, must support an entrypoint which creates users/databases from appropriate config files |
-| statefulset.image.tag | string | `"27"` |  |
+| statefulset.image.tag | string | `"29"` |  |
 | statefulset.livenessProbe | object | `{"enabled":false}` | Configure the healthcheck for the database |
 | statefulset.podLabels | object | `{}` | The labels to be applied to instances of the database |
 
